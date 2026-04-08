@@ -1,47 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apex Trading Journal - Support</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
-  .container { max-width: 600px; text-align: center; }
-  h1 { font-size: 28px; margin-bottom: 12px; }
-  p { color: #aaa; font-size: 16px; line-height: 1.6; margin-bottom: 24px; }
-  a.button { display: inline-block; background: #D4AF37; color: #000; text-decoration: none; padding: 14px 32px; border-radius: 12px; font-weight: 600; font-size: 16px; }
-  a.button:hover { opacity: 0.9; }
-  .faq { text-align: left; margin-top: 40px; }
-  .faq h2 { font-size: 20px; margin-bottom: 16px; }
-  .faq-item { margin-bottom: 20px; }
-  .faq-item h3 { font-size: 16px; margin-bottom: 6px; color: #D4AF37; }
-  .faq-item p { font-size: 14px; color: #999; margin-bottom: 0; }
-</style>
-</head>
-<body>
-<div class="container">
-  <h1>Support</h1>
-  <p>Need help with your Apex Training App? We're here for you. Reach out and we'll get back to you as soon as possible.</p>
-  <a class="button" href="mailto:irvingindustries@outlook.com">Contact Support</a>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Training - Support</title>
 
-  <div class="faq">
-    <h2>FAQ</h2>
-    <div class="faq-item">
-      <h3>How do I log a trade?</h3>
-      <p>Tap the + button on the home screen, fill in your trade details, and save.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Can I export my data?</h3>
-      <p>We're working on export features for a future update.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How do I reset my data?</h3>
-      <p>Contact us via email and we'll help you out.</p>
-    </div>
-  </div>
-</div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0a0a0a;
+      --card: #111111;
+      --text: #ffffff;
+      --muted: #aaaaaa;
+      --muted-2: #999999;
+      --accent: #d4af37;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 28px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      text-align: center;
+    }
+
+    .logo {
+      width: 220px;
+      max-width: 80%;
+      margin-bottom: 20px;
+      opacity: 0.95;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    .support-note {
+      margin-top: 12px;
+      color: var(--muted-2);
+      font-size: 14px;
+    }
+
+    .faq {
+      margin-top: 40px;
+      text-align: left;
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+    }
+
+    .faq h2 {
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .faq-item {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .faq-item p {
+      font-size: 15px;
+      color: var(--muted-2);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- LOGO -->
+    <img src="logo.png" alt="Apex Training Logo" class="logo" />
+
+    <h1>Support</h1>
+
+    <p class="intro">
+      Need help with your Apex Training app? We’re here to help with account
+      questions, app issues, and general support.
+    </p>
+
+    <a class="button" href="mailto:irvingindustries@outlook.com?subject=Apex%20Training%20Support">
+      Contact Support
+    </a>
+
+    <p class="support-note">
+      irvingindustries@outlook.com
+    </p>
+
+    <section class="faq">
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <h3>How do I start a training session?</h3>
+        <p>Open the app and select your workout to begin.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I track my progress?</h3>
+        <p>Yes. The app tracks your workouts and performance over time.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>App not working correctly?</h3>
+        <p>Email support with your device info and a quick description.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I reset my data?</h3>
+        <p>Contact support and we’ll guide you through it.</p>
+      </div>
+    </section>
+
+  </main>
 </body>
 </html>
-
-
