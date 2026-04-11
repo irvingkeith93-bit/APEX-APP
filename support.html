@@ -17,9 +17,13 @@
       --card: #111111;
       --text: #ffffff;
       --muted: #aaaaaa;
-      --muted-2: #999999;
-      --accent: #d4af37;
+      --muted-2: #666666;
+      --accent-start: #FF5A32;
+      --accent-end: #FF8C42;
+      --accent-solid: #FF8C42;
       --border: rgba(255, 255, 255, 0.08);
+      --glow: rgba(255, 90, 50, 0.3);
+      --glow-strong: rgba(255, 90, 50, 0.4);
     }
 
     body {
@@ -45,17 +49,22 @@
     }
 
     .logo {
-      width: 320px;
-      max-width: 90%;
-      height: auto;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 32px;
       display: block;
-      margin: 0 auto 20px;
-      opacity: 0.95;
+      margin: 0 auto 24px;
+      box-shadow: 0 0 60px var(--glow);
     }
 
     h1 {
       font-size: 30px;
       margin-bottom: 12px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .intro {
@@ -67,18 +76,19 @@
 
     .button {
       display: inline-block;
-      background: var(--accent);
-      color: #000;
-      text-decoration: none;
       padding: 14px 28px;
-      border-radius: 12px;
+      border-radius: 50px;
       font-weight: 700;
       font-size: 16px;
-      transition: 0.2s ease;
+      text-decoration: none;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .button:hover {
-      opacity: 0.9;
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px var(--glow-strong);
     }
 
     .support-note {
@@ -97,6 +107,7 @@
     .faq h2 {
       font-size: 22px;
       margin-bottom: 18px;
+      color: var(--text);
     }
 
     .faq-item {
@@ -111,12 +122,12 @@
     .faq-item h3 {
       font-size: 16px;
       margin-bottom: 6px;
-      color: var(--accent);
+      color: var(--accent-solid);
     }
 
     .faq-item p {
       font-size: 15px;
-      color: var(--muted-2);
+      color: var(--muted);
       line-height: 1.6;
     }
   </style>
@@ -125,7 +136,12 @@
 <body>
   <main class="container">
 
-    <img src="/APEX-APP/logo.png" alt="Apex Training Logo" class="logo" onerror="this.style.display='none'">
+    <img
+      src="https://r2-pub.rork.com/projects/z1pmyt1d4oc6wrvyt0lcw/assets/d0d0fb19-6ede-424f-8ac7-1b7674cb9b90.png"
+      alt="Apex Training Logo"
+      class="logo"
+      onerror="this.src='/APEX-APP/logo.png'"
+    >
 
     <h1>Support</h1>
 
